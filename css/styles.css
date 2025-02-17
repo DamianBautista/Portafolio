@@ -1,0 +1,327 @@
+/* Habilitar scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos básicos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+/* Logo y nombre */
+.header__logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__logo-img-cont {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+    background: #0062b9;
+}
+
+/* Color del logo*/
+.header__logo-sub {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Menú principal */
+.header__main {
+    display: flex;
+    align-items: center;
+    
+}
+
+.header__links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__link-wrapper {
+    margin: 0 0.5rem;
+    
+  }
+
+.header__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+
+/*Cambia el color al pasar el maus por el menu*/
+.header__link:hover {
+    color: #7d37ff;
+    
+}
+
+/* Botón hamburguesa (oculto en escritorio) */
+.header__menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.hamburger {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 5px;
+    background: #333;
+    border-radius: 2px;
+    transition: transform 0.5s, opacity 0.3s;
+}
+
+/* Menú móvil */
+.header__sm-menu {
+    display: none;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* Alineado a la izquierda */
+    width: 100%;
+    /* Ocupa todo el ancho */
+}
+
+.header__sm-menu-content {
+    padding: 1.5rem;
+}
+
+.header__sm-menu-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 700px) {
+
+    /* Ocultar menú horizontal */
+    .header__links {
+        display: none;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .header__menu-toggle {
+        display: block;
+    }
+
+    /* Mostrar menú móvil al activarse */
+    .header__sm-menu.active {
+        display: block;
+    }
+}
+
+/*Lineas que separan cada boton del menu*/
+.header__sm-menu-link {
+    margin: 1.5rem 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.header__sm-menu-link a {
+    display: block;
+    /* Asegura que el enlace ocupe todo el ancho */
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+}
+
+/**/
+/**/
+
+
+/* SECCION HOME*/
+section {
+    padding: 80px 2rem 2rem; /*Hay que modificar*/
+    margin-top: 80px;
+    /* Espacio para evitar solapamiento con el header fijo */
+}
+
+/*NO SE PARA QUE ES HAY QUE REVISARLO*/
+section h1,
+section h2,
+section h3 {
+    margin-bottom: 1rem;
+}
+
+/*Altura de espacio entre un texto de un parrafo*/
+section p {
+    line-height: 2;
+    margin-bottom: 1rem; /* Añadir espacio abajo del párrafo */
+}
+
+
+
+/* Íconos de redes sociales */
+.home-hero__info .social-icons {
+    display: flex; /* Usamos flexbox para alinear los íconos en una fila */
+    justify-content: center; /* Centra los íconos */
+    gap: 10px; /* Espacio entre los íconos */
+    flex-wrap: wrap; /* Permite que los íconos se ajusten si el espacio es pequeño */
+    margin-top: 1rem; /* Para separar los íconos de los textos */
+}
+
+.home-hero__info a {
+    font-size: 2rem;
+    color: #9057cd;
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+/* Ajustes de la sección principal */
+
+.home-hero__content a {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #c48dff;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.home-hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90rem;
+    width: 92%;
+
+
+}
+/*Responsibo el home*/
+@media only screen and (max-width: 37.5em) {
+    .home-hero__content {
+        padding: 19rem 0 13rem 0;
+        margin: auto;
+        position: static;
+        transform: translate(0, 0);
+    }
+}
+
+
+
+
+
+#home {
+    min-height: 100vh; /* Mantiene la sección ocupando toda la pantalla */
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background-color: #eee;/* Color de fondo */
+    /* Ajusta el color según tu preferencia */
+    padding: 5rem 2rem; /* Ajuste de espacio */
+}
+
+/* Título principal */
+.heading-primary {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: bold;
+    color: #000; /* Negro */
+}
+/*Lo hace responsivo*/
+@media only screen and (max-width: 37.5em) {
+    .heading-primary {
+        font-size: 4.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 2rem;
+    background: #000000;
+    color: #fff;
+    margin-top: 2rem;
+}

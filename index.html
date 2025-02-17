@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damian Bautista</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+        <div class="header__content">
+            <!-- Logo y nombre en la izquierda -->
+            <div class="header__logo-container">
+                <div class="header__logo-img-cont">
+                    <img src="assets/img/Audifonos.jpg" alt="Damian Bautista Logo" class="header__logo-img" />
+                </div>
+                <span class="header__logo-sub">Damian Bautista</span>
+            </div>
+            <!-- Menú horizontal (escritorio) y botón hamburguesa (móvil) en la derecha -->
+            <div class="header__main">
+                <ul class="header__links">
+                    <li class="header__link-wrapper">
+                        <a href="#home" class="header__link">Home</a>
+                    </li>
+                    <li class="header__link-wrapper">
+                        <a href="#about" class="header__link">About</a>
+                    </li>
+                    <li class="header__link-wrapper">
+                        <a href="#projects" class="header__link">Projects</a>
+                    </li>
+                    <li class="header__link-wrapper">
+                        <a href="#skills" class="header__link">Skills</a>
+                    </li>
+                    <li class="header__link-wrapper">
+                        <a href="#contact" class="header__link">Contact</a>
+                    </li>
+                </ul>
+                <button class="header__menu-toggle" aria-label="Toggle Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- Menú desplegable para móvil -->
+        <div class="header__sm-menu">
+            <div class="header__sm-menu-content">
+                <ul class="header__sm-menu-links">
+                    <li class="header__sm-menu-link">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="header__sm-menu-link">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="header__sm-menu-link">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="header__sm-menu-link">
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li class="header__sm-menu-link">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Sección Home -->
+    <section id="home">
+        <div class="home-hero__content">
+            <h1 class="heading-primary">Hi, I'm Damian Bautista.</h1>
+
+
+            <div class="home-hero__info">
+                <p>
+                    Systems Engineering student committed to continuous learning and developingefficient, scalable
+                    applications using Java and Spring Boot.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/damianbautistaofficial" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/DamianBautistaOfficial/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@damianbautistaofficial" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- Sección About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Here you'll find more information about me, what I do, and my current skills, mainly in programming and
+            technology.
+        </p>
+        <h3>Get to know me!</h3>
+        <p>
+            I'm a Systems Engineering student passionate about technology and software development. Currently, I'm
+            continuously learning and deepening my understanding of Java and Spring Boot, tools that I'm using as I
+            venture into building robust and efficient applications.
+        </p>
+        <p>
+            Besides programming, I enjoy playing chess and video games like Call of Duty Mobile, activities that help me
+            enhance my strategy, concentration, and decision-making skills.
+        </p>
+        <p>
+            I'm open to opportunities where I can keep learning, contribute my knowledge, and grow professionally. If
+            you have an interesting offer, feel free to contact me.
+        </p>
+    </section>
+
+    <!-- Sección Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Some projects content goes here.</p>
+    </section>
+
+    <!-- Sección Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            Feel free to contact me by submitting the form below, and I will get back to you as soon as possible.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Damian Bautista. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
